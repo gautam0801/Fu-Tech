@@ -1,0 +1,31 @@
+
+@media screen and (max-width: 767px) {
+.container-img {
+    column-count: 3;
+    column-gap: 10px;
+}
+}
+@media screen and (min-device-width: 768px) and (max-device-width:991px) {
+.container-img {
+    column-count: 6;
+    column-gap: 10px;
+}
+}
+@media screen and (min-device-width: 992px) {
+.container-img {
+    column-count: 12;
+    column-gap: 90px;
+}
+}
+
+/* .service_box{
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+.glry {
+    width: 85%;
+    margin: 35px auto 15px auto;
+    display: block;
+    padding-bottom: 20px;
+}

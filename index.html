@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fu Tech</title>
+    <link rel="stylesheet" href="https://amigoo.in/assets/css/style.css">
+    <link rel="stylesheet" href="https://amigoo.in/assets/css/gallery.css">
+    <link rel="stylesheet" href="https://amigoo.in/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://amigoo.in/assets/css/owl.theme.default.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+ <!--Firebase notifications using js-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-messaging.js"></script>
+
+  </head>
+  <body>
+
+          
+    <div class="container np">
+        <!-- Cover page area -->
+        <div class="cover-page" style="background-image: url('Futech\ IOT-1/0.jpg');">
+            <i class="fa-solid fa-share-nodes share-button"></i>         
+        </div>
+        <!-- Profile and Name Area -->
+        <div class="profile_name">
+
+            <div class="profile_image" style="background-image: url('1.jpeg');">
+            </div>
+            <div class="name_area">
+                <h2 class="name_heading mb-1">Priya vijayvargiya Tejwani
+                </h2>
+                <p class="designation"> IIOT & Automation <br> Futech IoT Pvt ltd </p>
+            </div>
+            <!-- <img src="images/doctor.jpeg" height="150px" width="150px" alt="Profile Image"> -->
+        </div>
+        <!-- Contact and Whatsapp buttons -->
+        <div class="contact_whatsapp">
+            <div class="row" style="width: 100%;margin: 0 auto;display: flex;
+            justify-content: space-evenly; padding-top: 8px;">
+                <div class="col-6 contact_box"  id="downloadVCardButton">
+                  <i class="fa-regular fa-address-book"></i>
+                  <p style="font-size: 13px;">+91 62329 19923</p>
+                  <p>Import Contact</p>
+                  <p class="small_txt">Directly into your contacts</p>
+                  <span class="dwnld-btn-cw">Save Contact</span>
+                </div>
+                                <div class="col-6 wp_box" onclick="window.location.href='https://api.whatsapp.com/send?phone=91 62329 19923'">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <p style="font-size: 13px;">+91 62329 19923</p>
+                  <p>Chat via Whatsapp</p>
+                  <p class="small_txt">With your own account</p>
+                  <span class="dwnld-btn-cw">Click to Chat</span>
+                </div>
+            </div>
+        </div>
+        <!-- Aboout Us Area -->
+        <h4 style="font-size: 16px;margin-top: 30px;margin-left: 20px;margin-bottom: 22px;text-align:justify;">About Us</h4>
+        <div class="about_us">
+          <div class="row">
+            <div class="col-12">
+              <!-- <h4>a brief introduction</h4> -->
+              <p style="text-align:justify;">We are team of professionals engaged in solutions for industrial automation and trading with in-depth domain knowledge of the field.We expertise in Siemens automation & drives solutions along with other industrial automation & IOT products like Siemens, Schneider, ABB and our own in-house developed IOT dashboards.With us customers get detailed solutions for their software & hardware needs of industrial automation.<span id="dots">...</span><span id="more">Futech Iot Pvt. Ltd. is situated in Indore, Madhya Pradesh, India, and was commenced in the year 2019. Sinamics Power, TB Female Test, TB Insertion Bridge, 10Sq mm 800 V Terminal Block bric, and more items are available from us. Customers continue to choose us over other businesses because of the high-quality service we provide at reasonable prices. We have a team of qualified specialists who help us to conduct our daily business operations smoothly and according to industry standards. Our companys excellent success and continuous growth are a result of our hard work, superior category items, open and customer-centric working approach.
+
+                Give us an opportunity to serve you; we guarantee that you will get good value for your money.</span></p>
+              <span onclick="readMore()" id="myBtn">Read more</span>
+            </div>
+          </div>
+        </div>
+         <!-- Services Area -->
+         <div class="d-flex" style="justify-content:space-between">
+        <h4 style="font-size: 16px;margin-top: 35px;margin-left: 20px;margin-bottom: 22px;">Our Customize Solution</h4>
+        <img src="https://amigoo.in/assets/img/swipe.gif" class="img img-fluid" style="margin-right: 15px; height: 50px; width: 50px;margin-top:22px">
+        </div>
+        <div class="services_area" style="background-color: #EEEEFF;  padding: 50px;">
+            <div style="display: flex; ; justify-content: space-evenly;" class="owl-carousel">
+                
+                                <div class="service_box" onclick="window.location.href='https://amigoo.in/services/drmukeshthakwani&&260'">
+                    <img   style="border-radius: 0%;" src="monitoring.jpeg" alt="Service Image">
+                    <p style="font-weight: 500;">On Premise data storage,Monitoring, Analysis and decision making</p>
+
+                    <!-- <span class="dwnld-btn-cw crt">View</span> -->
+                </div>
+                
+                                 <div class="service_box" onclick="window.location.href='#'">
+                    <img style="border-radius: 0%;" src="monitoring.jpeg" alt="Service Image">
+                    <p style="font-weight: 500; ">Cloud Solution for data storage,Enhanced monitoring,Analysis and decision making</p>
+                    <!-- <h5>Awards (2019-2020)</h5> -->
+                    <!-- <span class="dwnld-btn-cw crt">View</span> -->
+                </div>
+                
+                                 <!-- <div class="service_box" onclick="window.location.href='https://amigoo.in/services/drmukeshthakwani&&262'">
+                    <img src="https://amigoo.in/assets/img/drmukeshthakwani/1706175502_be4c7b50b724c9e0c5ae.png" alt="Service Image">
+                    <p>• "Made in Ghana Street Fair</p>
+                    <h5>Awards (2017-2018)</h5>
+                     <span class="dwnld-btn-cw crt">View</span> -->
+                <!-- </div> -->
+                
+                                 <!-- <div class="service_box" onclick="window.location.href='https://amigoo.in/services/drmukeshthakwani&&263'">
+                    <img src="https://amigoo.in/assets/img/drmukeshthakwani/1706175587_9fd05df8df81224849b9.png" alt="Service Image">
+                    <p>• "GIPC Ghana Club 100 Award</p>
+                    <h5>Awards (2015-2016)</h5> -->
+                    <!-- <span class="dwnld-btn-cw crt">View</span> -->
+                <!-- </div> -->
+                
+                                 <!-- <div class="service_box" onclick="window.location.href='https://amigoo.in/services/drmukeshthakwani&&264'">
+                    <img src="https://amigoo.in/assets/img/drmukeshthakwani/1706175622_005331a5d96fc16aeb66.png" alt="Service Image">
+                    <p> Published: January 21, 2021
+</p>
+                    <h5>Awards (2013-2014)</h5> -->
+                    <!-- <span class="dwnld-btn-cw crt">View</span> -->
+                <!-- </div> -->
+<!--                 
+                                 <div class="service_box" onclick="window.location.href='https://amigoo.in/services/drmukeshthakwani&&283'">
+                    <img src="https://amigoo.in/assets/img/drmukeshthakwani/1706361368_49c987c9f7ed70b7828b.png" alt="Service Image">
+                    <p>B5 Plus Limited, a steel facto</p>
+                    <h5>Contribution</h5>
+                    <span class="dwnld-btn-cw crt">View</span>
+                </div>
+                 -->
+                                
+            </div>
+        </div>
+        
+        
+
+       
+        
+                     <!-- Social Icons Area -->
+                     <div>
+        <h4 style="font-size: 16px;margin-top: 26px;margin-left: 20px;margin-bottom: 22px;">Social Space</h4>
+
+        <ul class="social_space">
+                  <li class="space_item"> <a href="https://www.linkedin.com/in/priya-vijayvargiya-tejwani-01441076/">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1691584532_873d7e206a013c33d7d9.png" alt="Facebook">
+                 </a> 
+        </li>
+                    <!-- <li class="space_item"> <a href="https://www.facebook.com/B5PlusGroup?mibextid=PtKPJ9">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1706174832_e21e3d29667fad513676.png" alt="Facebook">
+                 </a> 
+        </li> -->
+                    <!-- <li class="space_item"> <a href="https://www.instagram.com/b5plus_group/?igsh=MW9mODMweWp6YW94OQ%3D%3D">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1691584514_0a5003024999341d75f7.png" alt="Facebook">
+                 </a> 
+        </li> -->
+                    <!-- <li class="space_item"> <a href="https://twitter.com/plus_b5?lang=en">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1691584523_8dd7bd788bd6ce7e817c.png" alt="Facebook">
+                 </a> 
+        </li> -->
+                    <!-- <li class="space_item"> <a href="">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1691584490_9c43ed6ef065432c00f4.png" alt="Facebook">
+                 </a>  -->
+        <!-- </li> -->
+                    <li class="space_item"> <a href="https://youtu.be/qSPbWp1ZPNw?si=wk4BBpO-OtS1il7E">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1691584541_1b9a56646deeb5c22194.png" alt="Facebook">
+                 </a> 
+        </li>
+                    <li class="space_item"> <a href="mailto:priya@utindia.in">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1691820306_978bb7b68600f53f517a.png" alt="Facebook">
+                 </a> 
+        </li>
+                    <!-- <li class="space_item"> <a href="https://www.futechmart.in/">
+                   <img class="img img-fluid" src="https://amigoo.in/assets/img/1691653908_a4a62e2907d88087dd97.png" alt="Facebook">
+                 </a> 
+        </li> -->
+                   </ul>
+</div>
+                      
+  <section class="" style="margin-top:150px;"> 
+            <div class="main-content">
+    <div class="container">
+<div class="tab" style="margin-top:27px;">
+<button class="tablinks" id="defaultOpen" onclick="openCity(event, 'appo')">Appointment</button>
+<button class="tablinks" onclick="openCity(event, 'feed')">Gallery</button>
+<button class="tablinks" onclick="openCity(event, 'videos')">Videos</button>
+</div>
+
+
+<div id="feed" class="tabcontent">
+
+            <div class="image-tab">
+           
+            <div class="row tab1 ">
+                 <div class="glry">
+                    <div class="container-img">
+                              <div class="col-2 left-img">
+              <a class="read" type="btn" href="Futech IOT-1/2.jpg">
+              <img src="Futech IOT-1/2.jpg" width="75px" height="75px">
+              </a>
+              </div>
+
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="Futech IOT-1/7.jpg">
+              <img src="Futech IOT-1/7.jpg" width="75px" height="75px">
+              </a>
+              </div>
+
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="Futech IOT-1/8.jpg">
+              <img src="Futech IOT-1/8.jpg" width="75px" height="75px">
+              </a>
+              </div>
+
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="Futech IOT-1/9.jpg">
+              <img src="Futech IOT-1/9.jpg" width="75px" height="75px">
+              </a>
+              </div>
+
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="Futech IOT-1/10.jpg">
+              <img src="Futech IOT-1/10.jpg" width="75px" height="75px">
+              </a>
+              </div>
+
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="Futech IOT-1/18.jpg">
+              <img src="Futech IOT-1/18.jpg" width="75px" height="75px">
+              </a>
+              </div>
+<!-- 
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="https://amigoo.in/assets/img/drmukeshthakwani/1706172638_64e17e4094302a35ef6b.jpeg">
+              <img src="https://amigoo.in/assets/img/drmukeshthakwani/1706172638_64e17e4094302a35ef6b.jpeg" width="75px" height="75px">
+              </a>
+              </div>
+
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="https://amigoo.in/assets/img/drmukeshthakwani/1706172648_46f9a6819981fdd9dad5.jpeg">
+              <img src="https://amigoo.in/assets/img/drmukeshthakwani/1706172648_46f9a6819981fdd9dad5.jpeg" width="75px" height="75px">
+              </a>
+              </div>
+
+                                      <div class="col-2 left-img">
+              <a class="read" type="btn" href="https://amigoo.in/assets/img/drmukeshthakwani/1706172664_8f04d7700d25c4dcae1e.jpg">
+              <img src="https://amigoo.in/assets/img/drmukeshthakwani/1706172664_8f04d7700d25c4dcae1e.jpg" width="75px" height="75px">
+              </a>
+              </div> -->
+
+                                       </div>
+          
+      </div>
+            </div>
+          
+      </div>
+                                                             <div class="view">
+                    <a class="view-link btn" href="#">View All</a>
+                </div>
+                  </div>
+
+        <div id="videos" class="tabcontent">
+            
+
+                <div class="video-tab">
+
+                    <iframe style="border-radius:10px;" width="300" height="150"  src="https://www.youtube.com/embed/B_zwc-KU9No?si=RY80S9dJoUVn7fNR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                    
+
+                   
+
+                </div>
+
+                                                                   <div class="view">
+                    <a class="view-link btn" href="#">View All</a>
+                </div>
+                            </div>
+            <div id="appo" class="tabcontent">
+                <div class="service-tab">
+
+                    <div class="row tab1">
+                        <div class="col-12 appo-form">
+
+                            <h5 class="">Make an Appointment</h5>
+                            <form>
+                                <div class="mb-3">
+
+                                    <input type="text" class="form-control input2" id="flname1" aria-describedby="emailHelp" placeholder="Name">
+
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control input2" id="mblnumber1" placeholder="Phone no">
+                                </div>
+                                <div class="mb-3">
+
+                                <input type="text" class="form-control input2" id="city" aria-describedby="emailHelp" placeholder="City">
+
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select input3" aria-label="Default select example" id="complaint">
+                                      <option selected>Select Services</option>
+                                      <option value="service">service</option>
+                                      <option value="complaint">complaint</option>
+                        
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+
+                                    <textarea name="" id="area" class="form-control input2" placeholder="Enter details"></textarea>
+
+                                </div>
+
+                                <div class="text-center">
+                                    <a   onclick="location.href='https://api.whatsapp.com/send?phone=244313700&text=Hi,Dr. Mukesh Thakwani (Mike) Iam *'+document.getElementById('flname1').value+'*.%20My%20mobile%20number%20is%20*'+document.getElementById('mblnumber1').value+'* from *'+document.getElementById('city').value+'*. I want to %20*'+document.getElementById('complaint').value+'* *'+document.getElementById('area').value+'*.';" class="btn  appo-btn">Submit</a>
+                                </div>
+                            </form>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="downloads" class="tabcontent">
+                <div class="service-tab">
+
+                    <div class="row tab1">
+                        <div class="col-12 appo-form">
+                        
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+            
+            
+    </div>
+</div>
+</section>
+
+
+
+        <!-- Contact Area -->
+        <h4 style="font-size: 16px;margin-top: 15px;margin-left: 20px;margin-bottom: 22px;">Contact</h4>
+        <div class="contact_area">
+          <div class="row" style="width: 95%;margin: 0 auto;display: flex;
+            justify-content: space-evenly;">
+                <div class="col-6 wp_box" >
+                  <i class="fa-solid fa-phone-flip"></i>
+                  <p onclick="location.href='tel:62329 19923';">+91 62329 19923</p>
+                                  </div>
+                <div class="col-6 contact_box">
+                  <i class="fa-regular fa-address-book"></i>
+                  
+                  <p class="small_txt">A-40, A-Block, New Siyaganj,Indore - 452007, Madhya Pradesh, India</p>
+                
+                </div>
+          </div>
+          <div class="map"  style="width: 95%;display: flex;
+            justify-content: space-around; padding: 5px;" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.142663676385!2d75.86400997530495!3d22.722938179384908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd12c024a89d%3A0xf8a8b932bcdd4b66!2sFUTECH%20IOT%20PVT.%20LTD!5e0!3m2!1sen!2sin!4v1733970996049!5m2!1sen!2sin" style="border:0;" allowfullscreen="" height="100%" width="220px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+<div>
+            <img src="showdetails.jpeg" alt="company details" height="150" width="120px" >
+</div>
+         
+          </div>
+        </div>
+      
+       
+
+    </div>
+    
+
+
+    <script src="https://amigoo.in/assets/js/jquery.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://amigoo.in/assets/js/owl.carousel.min.js"></script>
+    <script src="https://amigoo.in/assets/js/masonry.pkgd.min.js"></script> 
+
+    <!-- Owl Carousel -->
+     <script src="script.js"></script>
+    
+        
+  </body>
+</html>
