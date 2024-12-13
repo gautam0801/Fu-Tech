@@ -74,19 +74,19 @@
         <h4 style="font-size: 16px;margin-top: 35px;margin-left: 20px;margin-bottom: 22px;">Our Customize Solution</h4>
         <img src="https://amigoo.in/assets/img/swipe.gif" class="img img-fluid" style="margin-right: 15px; height: 50px; width: 50px;margin-top:22px">
         </div>
-        <div class="services_area" style="background-color: #EEEEFF;  padding: 50px;">
+        <div class="services_area" style="background-color: #EEEEFF;  padding: 50px; border-radius: 15px; margin-right: 10px; margin-left: 10px;">
             <div style="display: flex; ; justify-content: space-evenly;" class="owl-carousel">
                 
                                 <div class="service_box" onclick="window.location.href='https://amigoo.in/services/drmukeshthakwani&&260'">
-                    <img   style="border-radius: 0%;" src="monitoring.jpeg" alt="Service Image">
-                    <p style="font-weight: 500;">On Premise data storage,Monitoring, Analysis and decision making</p>
+                    <img   style="border-radius: 0%; float: left;" src="monitoring.jpeg" alt="Service Image" >
+                    <p style="font-weight: 500;">On Premise data storage,Monitoring, <br> Analysis and decision making</p>
 
                     <!-- <span class="dwnld-btn-cw crt">View</span> -->
                 </div>
                 
-                                 <div class="service_box" onclick="window.location.href='#'">
-                    <img style="border-radius: 0%;" src="monitoring.jpeg" alt="Service Image">
-                    <p style="font-weight: 500; ">Cloud Solution for data storage,Enhanced monitoring,Analysis and decision making</p>
+                                  <div class="service_box" onclick="window.location.href='#'">
+                    <img style="border-radius: 0%; float: left;" src="monitoring.jpeg" alt="Service Image">
+                    <p style="font-weight: 500; ">Cloud Solution for data storage,Enhanced <br> monitoring,Analysis and decision making</p>
                     <!-- <h5>Awards (2019-2020)</h5> -->
                     <!-- <span class="dwnld-btn-cw crt">View</span> -->
                 </div>
@@ -124,8 +124,7 @@
             </div>
         </div>
         
-        
-
+    
        
         
                      <!-- Social Icons Area -->
@@ -274,22 +273,24 @@
                         <div class="col-12 appo-form">
 
                             <h5 class="">Make an Appointment</h5>
-                            <form>
+                            <form  action="https://api.web3forms.com/submit" method="POST">
                                 <div class="mb-3">
 
-                                    <input type="text" class="form-control input2" id="flname1" aria-describedby="emailHelp" placeholder="Name">
+                                  <input type="hidden" name="access_key" value="f6087543-d92f-475c-91f2-331718117e9a">
 
-                                </div>
-                                <div class="mb-3">
-                                    <input type="tel" class="form-control input2" id="mblnumber1" placeholder="Phone no">
-                                </div>
-                                <div class="mb-3">
-
-                                <input type="text" class="form-control input2" id="city" aria-describedby="emailHelp" placeholder="City">
+                                    <input type="text" name="name" class="form-control input2" id="flname1" aria-describedby="emailHelp" placeholder="Name">
 
                                 </div>
                                 <div class="mb-3">
-                                    <select class="form-select input3" aria-label="Default select example" id="complaint">
+                                    <input type="tel"  name="phone_number"  class="form-control input2" id="mblnumber1" placeholder="Phone no">
+                                </div>
+                                <div class="mb-3">
+
+                                <input type="text" name="Email" class="form-control input2" id="email" aria-describedby="emailHelp" placeholder="Email">
+
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select input3" aria-label="Default select example" name="service_complaint" id="complaint">
                                       <option selected>Select Services</option>
                                       <option value="service">service</option>
                                       <option value="complaint">complaint</option>
@@ -298,12 +299,16 @@
                                 </div>
                                 <div class="mb-3">
 
-                                    <textarea name="" id="area" class="form-control input2" placeholder="Enter details"></textarea>
+                                    <textarea  name="details" id="area" class="form-control input2" placeholder="Enter details"></textarea>
 
                                 </div>
 
-                                <div class="text-center">
-                                    <a   onclick="location.href='https://api.whatsapp.com/send?phone=244313700&text=Hi,Dr. Mukesh Thakwani (Mike) Iam *'+document.getElementById('flname1').value+'*.%20My%20mobile%20number%20is%20*'+document.getElementById('mblnumber1').value+'* from *'+document.getElementById('city').value+'*. I want to %20*'+document.getElementById('complaint').value+'* *'+document.getElementById('area').value+'*.';" class="btn  appo-btn">Submit</a>
+                             
+
+                                <div >
+                                    <!-- <a   onclick="location.href='https://api.whatsapp.com/send?phone=244313700&text=Hi,Dr. Mukesh Thakwani (Mike) Iam *'+document.getElementById('flname1').value+'*.%20My%20mobile%20number%20is%20*'+document.getElementById('mblnumber1').value+'* from *'+document.getElementById('city').value+'*. I want to %20*'+document.getElementById('complaint').value+'* *'+document.getElementById('area').value+'*.';" class="btn  appo-btn">Submit</a> -->
+
+                                        <button type="submit" class="btn" style=" display: flex;align-items: center; justify-content: center;">Submit</button>
                                 </div>
                             </form>
 
@@ -345,7 +350,8 @@
             justify-content: space-evenly;">
                 <div class="col-6 wp_box" >
                   <i class="fa-solid fa-phone-flip"></i>
-                  <p onclick="location.href='tel:62329 19923';">+91 62329 19923</p>
+                  <p onclick="location.href='tel:+62329 19923';">+91 62329 19923</p>
+                  <a href="tel:+916232919923" style="text-decoration: none; color: black; font-weight: 400;">Contact Now</a>
                                   </div>
                 <div class="col-6 contact_box">
                   <i class="fa-regular fa-address-book"></i>
@@ -359,7 +365,9 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.142663676385!2d75.86400997530495!3d22.722938179384908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd12c024a89d%3A0xf8a8b932bcdd4b66!2sFUTECH%20IOT%20PVT.%20LTD!5e0!3m2!1sen!2sin!4v1733970996049!5m2!1sen!2sin" style="border:0;" allowfullscreen="" height="100%" width="220px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             
 <div>
+  <a href="https://qrco.de/bfdAdr"  target="_blank">
             <img src="showdetails.jpeg" alt="company details" height="150" width="120px" >
+</a>
 </div>
          
           </div>
@@ -378,6 +386,10 @@
 
     <!-- Owl Carousel -->
      <script src="script.js"></script>
+    
+
+    
+    
     
         
   </body>

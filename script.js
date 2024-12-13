@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
       $(".owl-carousel").owlCarousel();
     });
@@ -38,35 +39,35 @@ document.getElementById("defaultOpen").click();
 
     var trackingData = {
         url: window.location.href,
-        username: 'drmukeshthakwani', // Replace with actual username
+        username: 'Priya vijayvargiya Tejwani', // Replace with actual username
         useragent:navigator.userAgent,
         method:'view',
     };
 
-   fetch('/analyticstracking', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(trackingData)
-})
-.then(response => {
-    if (!response.ok) {
-        throw new Error('response is not valid');
-    }
-    return response.json();
-})
-.then(data => {
-    console.log(data); // Handle response data
-})
-.catch(error => {
-    console.log('Error:', error);
-});
+//    fetch('/analyticstracking', {
+//     method: 'POST',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(trackingData)
+// })
+// .then(response => {
+//     if (!response.ok) {
+//         throw new Error('response is not valid');
+//     }
+//     return response.json();
+// })
+// .then(data => {
+//     console.log(data); // Handle response data
+// })
+// .catch(error => {
+//     console.log('Error:', error);
+// });
 
     document.getElementById("downloadVCardButton").addEventListener("click", function() {
          var anchor = document.createElement("a");
-    anchor.href = 'https://amigoo.in/assets/vcf/drmukeshthakwani.vcf';
-    anchor.download = "https://amigoo.in/assets/vcf/drmukeshthakwani.vcf";
+    anchor.href = 'mam.vcf';
+    anchor.download = "mam.vcf";
     anchor.click();
      var trackingData = {
         url: window.location.href,
@@ -100,8 +101,8 @@ document.getElementById("defaultOpen").click();
         shareButton.addEventListener('click', event => {
             if (navigator.share) { 
             navigator.share({
-                title: 'a profile of drmukeshthakwani',
-                text: 'a profile of drmukeshthakwani',
+                title: 'Priya vijayvargiya Tejwani',
+                text: 'Priya vijayvargiya Tejwani',
                 url: ''
                 }).then(() => {
                 console.log('Thanks for sharing!');
@@ -122,84 +123,85 @@ document.getElementById("defaultOpen").click();
        
  var token;
     
-   var  username= 'drmukeshthakwani';
+   var  username= 'Priya vijayvargiya Tejwani';
    
    //this can be generate from firebase console using google account replace here  
     //  Firebase configuration
-    var firebaseConfig = {
-    apiKey: "AIzaSyAMDtrZc4GEzkhOl-VIDXzTNF6nLYt-dV8",
-    authDomain: "amigoo-7cc3a.firebaseapp.com",
-    projectId: "amigoo-7cc3a",
-    storageBucket: "amigoo-7cc3a.appspot.com",
-    messagingSenderId: "854321539377",
-    appId: "1:854321539377:web:7bd446ec605acb46faa810",                                                               
-    measurementId: "G-NST74XFL6V"
-  };                                                                                                    
-    firebase.initializeApp(firebaseConfig);            // Initialize Firebase 
-    
-// Initialize FCM
-    const messaging=firebase.messaging();
+//     var firebaseConfig = {
+//     apiKey: "AIzaSyAMDtrZc4GEzkhOl-VIDXzTNF6nLYt-dV8",
+//     authDomain: "amigoo-7cc3a.firebaseapp.com",
+//     projectId: "amigoo-7cc3a",
+//     storageBucket: "amigoo-7cc3a.appspot.com",
+//     messagingSenderId: "854321539377",
+//     appId: "1:854321539377:web:7bd446ec605acb46faa810",                                                               
+//     measurementId: "G-NST74XFL6V"
+//   };                                                                                                    
+//     firebase.initializeApp(firebaseConfig);            // Initialize Firebase 
+
+// // Initialize FCM
+    // const messaging=firebase.messaging();
     
     // Request notification permission
     
-    function InitiaizeFireBaseMessaging()
-    {
-        messaging
-        .requestPermission()
-        .then(function (){
-            console.log("Notification Permission");
-            // Token can be used to send notifications to individual devices
-            return messaging.getToken();
-        })
-        .then(function (token)
-        {
-            console.log("Token:"+token);
-           // Send this token to your server to associate it with the user
-            jQuery.ajax({
-        url: "inserttoken",
-        type: "POST",
-        data: { token: token,username:username},
-        success: function(data) {
+//     function InitiaizeFireBaseMessaging()
+//     {
+//         messaging
+//         .requestPermission()
+//         .then(function (){
+//             console.log("Notification Permission");
+//             // Token can be used to send notifications to individual devices
+//             return messaging.getToken();
+//         })
+//         .then(function (token)
+//         {
+//             console.log("Token:"+token);
+//            // Send this token to your server to associate it with the user
+//             jQuery.ajax({
+//         url: "inserttoken",
+//         type: "POST",
+//         data: { token: token,username:username},
+//         success: function(data) {
 
-        console.log(data);
-    }
-})
-        })
-        .catch(function (reason){
-            console.log(reason);
-        });
-    }
+//         console.log(data);
+//     }
+// })
+//         })
+//         .catch(function (reason){
+//             console.log(reason);
+//         });
+//     }
     
-    messaging.onMessage(function(payload)
-    {
-        console.log(payload);
-        const notificationoption={
-            body:payload.notification.body,
-            icon:payload.notification.icon,
-        };
+    // messaging.onMessage(function(payload)
+    // {
+    //     console.log(payload);
+    //     const notificationoption={
+    //         body:payload.notification.body,
+    //         icon:payload.notification.icon,
+    //     };
         
-        if(Notification.permission==="granted")
-        {
-            var notification=new Notification(payload.notification.title,notificationoption);
+    //     if(Notification.permission==="granted")
+    //     {
+    //         var notification=new Notification(payload.notification.title,notificationoption);
             
-            notification.onclick=function(ev){
-                ev.preventDefault();
-                window.open(payload.notification.click_action,'_blank');
-                notification.close();
-            }
-        }})
+    //         notification.onclick=function(ev){
+    //             ev.preventDefault();
+    //             window.open(payload.notification.click_action,'_blank');
+    //             notification.close();
+    //         }
+    //     }})
  
-    messaging.onTokenRefresh(function()
-    {
-        console.log();messaging.getToken()
-        .then(function (newtoken){
-            console.log("New Token:"+newtoken);
-        })
-        .catch(function (reason){
-            console.log(reason);
-        });
-    })
-    InitiaizeFireBaseMessaging();
+    // messaging.onTokenRefresh(function()
+    // {
+    //     console.log();messaging.getToken()
+    //     .then(function (newtoken){
+    //         console.log("New Token:"+newtoken);
+    //     })
+    //     .catch(function (reason){
+    //         console.log(reason);
+    //     });
+    // })
+    // InitiaizeFireBaseMessaging();
+    
    
     
 
